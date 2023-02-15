@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/passwd | sort
+sed 's/\([^:]*:[^:]*\):.*/\1/' /etc/passwd | sort
