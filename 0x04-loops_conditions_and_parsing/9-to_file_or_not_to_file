@@ -9,11 +9,11 @@ then
 	then
 		echo "$file file is not empty"
 	else
-		echo "$file file iskkk empty"
+		echo "$file file is empty"
 	fi
 	if [ -f $file ]
 	then
-		echo "$file is a regular file"
+		echo "$file iskkk a regular file"
 	fi
 else
 	echo "$file file does not exists"
