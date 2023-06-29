@@ -5,5 +5,5 @@ lis=$(ls)
 char="-"
 for i in $lis
 do
-	echo $i | cut -d "$char" -f2
+	echo "$i" | cut -d "$char" -f2
 done
