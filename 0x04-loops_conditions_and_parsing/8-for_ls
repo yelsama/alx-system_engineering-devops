@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#use for to print part of subjects
+
+lis=$(ls)
+char="-"
+for i in $lis
+do
+	echo $i | cut -d "$char" -f2
+done
