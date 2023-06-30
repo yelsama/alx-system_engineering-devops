@@ -12,8 +12,7 @@ while true
 do
 	echo To infinity and beyond
 	sleep 2
-	trap 'echo I hate the kill command' SIGTERM
+	trap 'echo I hate the kill command && finish' SIGTERM
 	trap 'echo Y U no love me?!' SIGINT
-	trap 'finish' SIGQUITgit
-	trap 'finish' SIGTERM
+	trap 'finish' SIGQUIT
 done
