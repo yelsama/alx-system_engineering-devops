@@ -15,4 +15,5 @@ do
 	trap 'echo I hate the kill command' SIGTERM
 	trap 'echo Y U no love me?!' SIGINT
 	trap 'finish' SIGTERM
+	trap 'finish' SIGQUIT
 done
