@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# A daemon process that writes and append something 
+# to a file
+
+while true
+do
+  echo "I am alive!" >> /tmp/my_process
+  sleep 2
+done
