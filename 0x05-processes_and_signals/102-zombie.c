@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * infinite_while - check the code
@@ -33,5 +34,6 @@ int main(void)
 		printf("Zombie process created, PID: %d\n", getpid());
 		infinite_while();
 	}
+	exit(0);
 	return (0);
 }
