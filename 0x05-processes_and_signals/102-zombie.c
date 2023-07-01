@@ -7,11 +7,11 @@
  */
 int infinite_while(void)
 {
-    while (1)
-    {
-        sleep(1);
-    }
-    return (0);
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
 
@@ -19,7 +19,7 @@ int infinite_while(void)
  * main - check the code
  * Return: Nothing
  */
-int main()
+int main(void)
 {
 	int	pid;
 	int i = 0;
@@ -33,5 +33,5 @@ int main()
 		printf("Zombie process created, PID: %d\n", getpid());
 		infinite_while();
 	}
-	return 0;
+	return (0);
 }
