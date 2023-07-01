@@ -3,9 +3,8 @@
 #include <stdlib.h>
 
 /**
- * infinite_while - Run an infinite while loop.
- *
- * Return: Always 0.
+ * infinite_while - check the code
+ * Return: zero but it will not get to that
  */
 int infinite_while(void)
 {
@@ -16,30 +15,24 @@ int infinite_while(void)
 	return (0);
 }
 
+
 /**
- * main - Creates five zombie processes.
- *
- * Return: Always 0.
+ * main - check the code
+ * Return: Nothing
  */
 int main(void)
 {
-	pid_t pid;
-	char count = 0;
+	pid_t	pid;
+	int 	i = 0;
 
-	while (count < 5)
-	{
-		pid = fork();
-		if (pid > 0)
-		{
-			printf("Zombie process created, PID: %d\n", pid);
-			sleep(1);
-			count++;
-		}
-		else
-			exit(0);
-	}
-
+	pid = fork();
+	while (i++ < 4)
+		if (pid)
+			pid = fork();
+	if (pid)
+		printf("Zombie process created, PID: %d\n", pid);
+	else
+		exit(0);
 	infinite_while();
-
 	return (EXIT_SUCCESS);
 }
