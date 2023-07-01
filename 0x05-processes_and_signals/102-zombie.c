@@ -22,8 +22,8 @@ int infinite_while(void)
  */
 int main(void)
 {
-	int	pid;
-	int i = 0;
+	pid_t	pid;
+	int 	i = 0;
 
 	pid = fork();
 	while (i++ < 4)
