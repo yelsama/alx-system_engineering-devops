@@ -2,7 +2,7 @@
 # displays all active IPv4 IPs on the machine
 
 ip_output=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | awk '{print $2}' | grep -v '127.0.0.1')
-if [[ ! -z "$ip_output" ]]
+if [[ -n "$ip_output" ]]
 then
 	echo "$ip_output"
 fi
