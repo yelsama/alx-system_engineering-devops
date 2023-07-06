@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#use of netstat
+
+nc -l -p 98
