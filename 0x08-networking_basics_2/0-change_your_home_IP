@@ -6,7 +6,7 @@ then
 	sudo cp /etc/hosts /etc/hosts.old
 	if grep -q '^.*localhost$' /etc/hosts
 	then
-		sudo sed -i  's/^.*localhost$/127.0.0.2	localhost/' /etc/hosts
+		sudo sed -i  's/^.*localhost$/127.0.0.2	localhost/' ~/etc/hosts
 	else
 		sudo echo "127.0.0.2	localhost" >> /etc/hosts
 	fi
