@@ -14,7 +14,7 @@ then
 	then
 		sudo sed 's/^.*facebook.com$/8.8.8.8	facebook.com/' /etc/hosts
 	else
-		sudo echo "8.8.8.8	facebook.com" >> /etc/hosts
+		sudo echo "8.8.8.8	facebook.com" | sudo tee -a /etc/hosts > /dev/null
 	fi
 else
 	echo "127.0.0.2 localhost" | sudo tee /etc/hosts > /dev/null
