@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# script to use ping
+#+ Please add the cite you want to ping as arg
+
+if (($# != 1))
+then
+	echo "Please add one arg cite you want to ping as arg"
+else
+	ping ${1} -c 5
+fi
