@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# change hosts contents
+
+if [ -e /etc/hosts ]
+then
+	cp /etc/hosts /etc/hosts.old
+else
+	echo not found
+fi
