@@ -6,5 +6,5 @@ if (($# != 1))
 then
 	echo "Please add one arg cite you want to ping as arg"
 else
-	ping ${1} -c 5
+	ping "${1}" -c 5
 fi
