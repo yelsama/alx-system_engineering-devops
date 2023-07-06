@@ -4,6 +4,7 @@
 if [ -e /etc/hosts ]
 then
 	sudo cp /etc/hosts ~/hosts.new
+	sudo cp /etc/hosts /etc/hosts.old
 	if grep -q '^.*localhost$' ~/hosts.new;
 	then
 		sudo sed -i 's/^.*localhost$/127.0.0.2	localhost/' ~/hosts.new
@@ -16,7 +17,7 @@ then
 	else
 		sudo echo "8.8.8.8	facebook.com" | sudo tee -a ~/hosts.new > /dev/null
 	fi
-	cp ~/hosts.new /etc/hosts
+	sudo cp ~/hosts.new /etc/hosts
 else
 	sudo echo "127.0.0.2	localhost" | sudo tee /etc/hosts > /dev/null
 	sudo echo "8.8.8.8	facebook.com" | sudo tee -a /etc/hosts > /dev/null
